@@ -15,10 +15,10 @@
   outputs = { self, nixpkgs, flake-utils, ... }: flake-utils.lib.eachDefaultSystem (system: let
     pkgs = import nixpkgs { inherit system; };
     dotnet-sdk = (pkgs.dotnetCorePackages.combinePackages [
-      pkgs.dotnet-sdk_8
-      pkgs.dotnet-sdk_9
+      pkgs.dotnet-sdk_8 # Needed by LibDeflate.
+      pkgs.dotnet-sdk_10
     ]);
-    dotnet-runtime = pkgs.dotnet-runtime_9;
+    dotnet-runtime = pkgs.dotnet-runtime_10;
   in {
     packages = rec {
       default = cli;
