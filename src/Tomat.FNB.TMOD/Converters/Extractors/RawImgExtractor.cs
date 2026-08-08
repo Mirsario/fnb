@@ -20,7 +20,7 @@ public static class RawImgExtractor
             fixed (byte* pData = data)
             {
                 var width  = *(int*)(pData + 4);
-                var height = *(int*)(pData + 4);
+                var height = *(int*)(pData + 8);
                 var pImage = pData + 12;
 
                 using var image = Image.WrapMemory<Rgba32>(pImage, width * height * 4, width, height);
