@@ -381,6 +381,7 @@ public sealed class TmodFile : IDisposable
             }
 
             converter.Convert(path, cachedBytes, action);
+            return;
         }
 
         action(path, cachedBytes);
