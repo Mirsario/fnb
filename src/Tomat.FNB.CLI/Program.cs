@@ -12,8 +12,8 @@ internal static class Program
                     .SetExecutableName("fnb")
                     .SetTitle("fnb")
                     .SetDescription(
-                         "tmod & fnb file packer and unpacker"
-                       + "\nCopyright (C) 2025  Tomat et al."
+                         "tmod & xnb file packer and unpacker"
+                       + "\nCopyright (C) 2026  tomat et al."
                      )
                     .AddCommandsFromThisAssembly()
                     .Build()
